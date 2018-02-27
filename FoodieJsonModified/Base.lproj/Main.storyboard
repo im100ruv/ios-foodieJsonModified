@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Pc-me-gKy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodieJsonModified" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-w5-wVO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodItemCell" rowHeight="116" id="BMR-u3-VM6" customClass="FoodItemCell" customModule="FoodieJsonModified" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="116"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BMR-u3-VM6" id="Qe3-Wf-s0q">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="115.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Tq-Sg-1oW">
+                                                    <rect key="frame" x="15" y="8" width="120" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="krV-fL-wO8"/>
+                                                        <constraint firstAttribute="width" constant="120" id="mND-DS-gPN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-ni-J9H">
+                                                    <rect key="frame" x="155" y="8" width="53" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfF-z9-wWF">
+                                                    <rect key="frame" x="155" y="36" width="87" height="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y07-Hw-yYa">
+                                                    <rect key="frame" x="329" y="87" width="41" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GfF-z9-wWF" secondAttribute="trailing" constant="20" symbolic="YES" id="4Rh-jj-WIu"/>
+                                                <constraint firstItem="GfF-z9-wWF" firstAttribute="leading" secondItem="8Tq-Sg-1oW" secondAttribute="trailing" constant="20" id="JBX-Ht-dDV"/>
+                                                <constraint firstItem="y07-Hw-yYa" firstAttribute="bottom" secondItem="8Tq-Sg-1oW" secondAttribute="bottom" id="KKA-rY-cLG"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nCc-ni-J9H" secondAttribute="trailing" constant="20" symbolic="YES" id="QE0-QT-6Ab"/>
+                                                <constraint firstItem="GfF-z9-wWF" firstAttribute="top" secondItem="nCc-ni-J9H" secondAttribute="bottom" constant="5" id="Zwz-4j-WSE"/>
+                                                <constraint firstItem="nCc-ni-J9H" firstAttribute="top" secondItem="8Tq-Sg-1oW" secondAttribute="top" id="jBv-pi-NWX"/>
+                                                <constraint firstItem="8Tq-Sg-1oW" firstAttribute="top" secondItem="Qe3-Wf-s0q" secondAttribute="top" constant="8" id="kB0-6h-mAj"/>
+                                                <constraint firstItem="nCc-ni-J9H" firstAttribute="leading" secondItem="8Tq-Sg-1oW" secondAttribute="trailing" constant="20" id="oDs-CS-smr"/>
+                                                <constraint firstAttribute="trailing" secondItem="y07-Hw-yYa" secondAttribute="trailing" constant="5" id="rRR-Ez-dfS"/>
+                                                <constraint firstItem="8Tq-Sg-1oW" firstAttribute="leading" secondItem="Qe3-Wf-s0q" secondAttribute="leading" constant="15" id="wFE-ih-aIp"/>
+                                                <constraint firstItem="y07-Hw-yYa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Qe3-Wf-s0q" secondAttribute="leading" constant="20" symbolic="YES" id="wFd-yF-Rkq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodDescLbl" destination="GfF-z9-wWF" id="KgM-Ia-fn2"/>
+                                            <outlet property="foodImg" destination="8Tq-Sg-1oW" id="OX4-mk-80N"/>
+                                            <outlet property="foodNameLbl" destination="nCc-ni-J9H" id="63F-GV-otP"/>
+                                            <outlet property="foodPriceLbl" destination="y07-Hw-yYa" id="grH-Ea-xe6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w4Z-w5-wVO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="neW-Wy-8Pl"/>
+                            <constraint firstItem="w4Z-w5-wVO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="q8a-zB-x0d"/>
+                            <constraint firstItem="w4Z-w5-wVO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wli-GP-eOG"/>
+                            <constraint firstItem="w4Z-w5-wVO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wsk-ho-H1O"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="w4Z-w5-wVO" id="DNh-EH-kRk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="53"/>
+        </scene>
+        <!--FirstVC-->
+        <scene sceneID="xu6-r5-CyZ">
+            <objects>
+                <viewController id="9Pc-me-gKy" customClass="FirstVC" customModule="FoodieJsonModified" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="apa-X4-hWV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqi-OE-Wsn">
+                                <rect key="frame" x="58" y="315" width="258" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.85479058159999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Press Here To See Food Items">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="bCu-Lq-AGo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="USj-cK-gSA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osh-Vu-rQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-572" y="53"/>
         </scene>
     </scenes>
 </document>

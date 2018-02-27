@@ -12,6 +12,9 @@
 		C6F81C8A2045545C0007F7D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F81C882045545C0007F7D2 /* Main.storyboard */; };
 		C6F81C8C2045545C0007F7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F81C8B2045545C0007F7D2 /* Assets.xcassets */; };
 		C6F81C8F2045545C0007F7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F81C8D2045545C0007F7D2 /* LaunchScreen.storyboard */; };
+		C6F81C9720455D610007F7D2 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F81C9620455D610007F7D2 /* FoodItemCell.swift */; };
+		C6F81C9920457B1C0007F7D2 /* PrepareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F81C9820457B1C0007F7D2 /* PrepareData.swift */; };
+		C6F81C9B20457F1E0007F7D2 /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F81C9A20457F1E0007F7D2 /* FirstVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C6F81C8B2045545C0007F7D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6F81C8E2045545C0007F7D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6F81C902045545C0007F7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F81C9620455D610007F7D2 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
+		C6F81C9820457B1C0007F7D2 /* PrepareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareData.swift; sourceTree = "<group>"; };
+		C6F81C9A20457F1E0007F7D2 /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 		C6F81C832045545C0007F7D2 /* FoodieJsonModified */ = {
 			isa = PBXGroup;
 			children = (
+				C6F81C9A20457F1E0007F7D2 /* FirstVC.swift */,
+				C6F81C9820457B1C0007F7D2 /* PrepareData.swift */,
 				C6F81C842045545C0007F7D2 /* AppDelegate.swift */,
 				C6F81C862045545C0007F7D2 /* ViewController.swift */,
+				C6F81C9620455D610007F7D2 /* FoodItemCell.swift */,
 				C6F81C882045545C0007F7D2 /* Main.storyboard */,
 				C6F81C8B2045545C0007F7D2 /* Assets.xcassets */,
 				C6F81C8D2045545C0007F7D2 /* LaunchScreen.storyboard */,
@@ -136,7 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F81C9720455D610007F7D2 /* FoodItemCell.swift in Sources */,
+				C6F81C9920457B1C0007F7D2 /* PrepareData.swift in Sources */,
 				C6F81C872045545C0007F7D2 /* ViewController.swift in Sources */,
+				C6F81C9B20457F1E0007F7D2 /* FirstVC.swift in Sources */,
 				C6F81C852045545C0007F7D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6ND5VTK9;
 				INFOPLIST_FILE = FoodieJsonModified/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im100ruv.FoodieJsonModified;
@@ -289,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6ND5VTK9;
 				INFOPLIST_FILE = FoodieJsonModified/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im100ruv.FoodieJsonModified;
